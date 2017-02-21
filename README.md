@@ -9,7 +9,9 @@ The ground truth images for this model were selected from these historic books:
 - Egger: Die christliche Mutter (1914)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
 
-In addition samples from this book are included for testing the robustness of the model:
+For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
+
+In addition, samples from this book are included for testing the robustness of the model:
 
 - Chronik der nördlichen Probstei 
 
