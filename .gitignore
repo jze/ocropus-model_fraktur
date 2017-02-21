@@ -1,0 +1,4 @@
+*[0-9a-f].txt
+.pynative/
+train.txt
+test.txt
