@@ -1,4 +1,6 @@
-*[0-9a-f].txt
+training/*[0-9a-f].txt
+testing/*[0-9a-f].txt
+exclusively_for_testing/*[0-9a-f].txt
 .pynative/
 train.txt
 test.txt
