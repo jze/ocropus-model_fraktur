@@ -1,3 +1,12 @@
+# Fraktur model for OCRopus
+
+This is a character model for recognizing Fraktur font with [OCRopus](https://github.com/tmbdev/ocropy). 
+
+With test data from a book that has not been used in the training process it yields an excellent error rate of 0.296%. It is slightly better that the 'standard' Fraktur model which has an error rate of 0.466%.
+
+In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also trained a character model for [CLSTM](https://github.com/tmbdev/clstm). 
+
+
 ## Sources
 
 The ground truth images for this model were selected from these historic books:
