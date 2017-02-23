@@ -11,11 +11,12 @@ In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also tr
 
 The ground truth images for this model were selected from these historic books:
 
+- Menzel: Der praktische Maurer  (1847)
 - Kiel city directory (1888)
 - Frapan: Bittersüß (1891)
-- Ludendorff: Kriegserinnerungen (1921)
-- Menzel: Der praktische Maurer  (1847)
+- Köln city directory (1891)
 - Egger: Die christliche Mutter (1914)
+- Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
