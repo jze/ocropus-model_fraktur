@@ -18,6 +18,7 @@ The ground truth images for this model were selected from these historic books:
 - Egger: Die christliche Mutter (1914)
 - Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
+- Gartenlaube Heft 1, S. 8 (1897)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
