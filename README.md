@@ -22,9 +22,10 @@ The ground truth images for this model were selected from these historic books:
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
-In addition, samples from this book are included for testing the robustness of the model:
+In addition, samples from these documents are included for testing the robustness of the model:
 
 - Peters: Wisch und Umgegend (1898) 
+- Internationaler Funkentelegraphenvertrag (1906)
 
 ## Special characters
 
