@@ -22,7 +22,7 @@ For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic t
 
 In addition, samples from this book are included for testing the robustness of the model:
 
-- Chronik der nördlichen Probstei 
+- Peters: Wisch und Umgegend (1898) 
 
 ## Special characters
 
