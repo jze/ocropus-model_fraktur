@@ -5,3 +5,6 @@ exclusively_for_testing/*[0-9a-f].txt
 train.txt
 test.txt
 correction.html
+fraktur-[0-9]*.pyrnn.gz
+fraktur-[0-9]*.clstm
+*.bin.txt
