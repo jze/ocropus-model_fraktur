@@ -2,7 +2,7 @@
 
 This is a character model for recognizing Fraktur font with [OCRopus](https://github.com/tmbdev/ocropy). 
 
-With test data from a book that has not been used in the training process it yields an excellent error rate of 0.296%. It is slightly better that the 'standard' Fraktur model which has an error rate of 0.466%.
+With test data that has not been used in the training process it yields an excellent error rate of 0.296%. It is slightly better that the 'standard' Fraktur model which has an error rate of 0.466%.
 
 In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also trained a character model for [CLSTM](https://github.com/tmbdev/clstm). 
 
@@ -19,6 +19,7 @@ The ground truth images for this model were selected from these historic books:
 - Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
 - Gartenlaube Heft 1, S. 8 (1897)
+- Topographische Chronik von Breslau  (1805)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
@@ -26,6 +27,7 @@ In addition, samples from these documents are included for testing the robustnes
 
 - Peters: Wisch und Umgegend (1898) 
 - Internationaler Funkentelegraphenvertrag (1906)
+- Das Inselschiff, eine Zeitschrift für Freunde der Literatur und des schönen Buches, page 23 (1914)
 
 ## Special characters
 
@@ -59,3 +61,13 @@ I decided to distinguish between the two kind of quotation marks.
 - closing: “
 
 Therefore, the image above becomes „Bildhauer“.
+
+## Training
+### ocropy
+To train the model from scratch you can use this command:
+
+	ocropus-rtrain -c codec.txt -F 2000 -o fraktur "training/*.bin.png"
+
+(Make sure that the OCRopus directory is included in PATH.) If you want to improve the existing model you can start with it:
+
+	ocropus-rtrain -c codec.txt -F 2000 --load fraktur.pyrnn.gz -o fraktur "training/*.bin.png"
