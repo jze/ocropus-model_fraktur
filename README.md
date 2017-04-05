@@ -22,6 +22,7 @@ The ground truth images for this model were selected from these historic books:
 - Topographische Chronik von Breslau  (1805)
 - Kreis-Kalender für den Kreis Plön (1909)
 - Was sollen wir kochen? (1915)  urn:nbn:at:AT-OOeLB-1184253
+- Schiller und Oberösterreich (1905) urn:nbn:at:AT-OOeLB-1099695
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
