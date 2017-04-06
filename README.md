@@ -2,7 +2,7 @@
 
 This is a character model for recognizing Fraktur font with [OCRopus](https://github.com/tmbdev/ocropy). 
 
-With test data that has not been used in the training process it yields an excellent error rate of 0.296%. It is slightly better that the 'standard' Fraktur model which has an error rate of 0.466%.
+With test data that has not been used in the training process it yields an excellent error rate of 1.089%. The 'standard' Fraktur model shows an error rate of 3.14% for the same test data.
 
 In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also trained a character model for [CLSTM](https://github.com/tmbdev/clstm). 
 
@@ -11,18 +11,18 @@ In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also tr
 
 The ground truth images for this model were selected from these historic books:
 
-- Menzel: Der praktische Maurer  (1847)
-- Kiel city directory (1888)
-- Frapan: Bittersüß (1891)
-- Köln city directory (1891)
-- Egger: Die christliche Mutter (1914)
-- Ludendorff: Kriegserinnerungen (1921)
-- Ehrenbuch der Gefallenen Stuttgarts (1925)
-- Gartenlaube Heft 1, S. 8 (1897)
 - Topographische Chronik von Breslau  (1805)
-- Kreis-Kalender für den Kreis Plön (1909)
+- Egger: Die christliche Mutter (1914)
+- Frapan: Bittersüß (1891)
+- Gartenlaube Heft 1, S. 8 (1897)
+- Kiel city directory (1888)
 - Was sollen wir kochen? (1915)  urn:nbn:at:AT-OOeLB-1184253
+- Köln city directory (1891)
+- Ludendorff: Kriegserinnerungen (1921)
+- Menzel: Der praktische Maurer  (1847)
+- Kreis-Kalender für den Kreis Plön (1909)
 - Schiller und Oberösterreich (1905) urn:nbn:at:AT-OOeLB-1099695
+- Ehrenbuch der Gefallenen Stuttgarts (1925)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
