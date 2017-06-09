@@ -11,6 +11,7 @@ In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also tr
 
 The ground truth images for this model were selected from these historic books:
 
+- Das astronomische Weltbild im Wandel der Zeit (1912) urn:nbn:at:AT-OOeLB-4113427
 - Topographische Chronik von Breslau  (1805)
 - Egger: Die christliche Mutter (1914)
 - Frapan: Bittersüß (1891)

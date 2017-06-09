@@ -10,9 +10,9 @@ if [ $? != 0 ]; then
 fi
 
 echo "Recognizing training data..."
-ocropus-rpred -q -n -m `pwd`/fraktur.pyrnn.gz -Q6 training/*.bin.png
+#ocropus-rpred -q -n -m `pwd`/fraktur.pyrnn.gz -Q6 training/*.bin.png
 echo "Recognizing testing data..."
-ocropus-rpred -q -n -m `pwd`/fraktur.pyrnn.gz -Q6 testing/*.bin.png
+#ocropus-rpred -q -n -m `pwd`/fraktur.pyrnn.gz -Q6 testing/*.bin.png
 
 ls training/*.gt.txt | cut -c 10- | sed 's/_.*//' | uniq  | while read book; do echo -ne "$book\t"; LANG=  wc -m -l training/${book}_*.gt.txt |grep total | sed 's/[^ 0-9].*//' ; done > r1.txt
 ls training/*.gt.txt | cut -c 10- | sed 's/_.*//' | uniq  | while read book; do echo -ne "$book\t"; LANG=  wc -m -l testing/${book}_*.gt.txt |grep total | sed 's/[^ 0-9].*//' ; done > r2.txt
