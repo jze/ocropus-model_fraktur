@@ -8,3 +8,5 @@ correction.html
 fraktur-[0-9]*.pyrnn.gz
 fraktur-[0-9]*.clstm
 *.bin.txt
+*.prob
+*.llocs
