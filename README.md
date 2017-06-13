@@ -21,7 +21,7 @@ The ground truth images for this model were selected from these historic books:
 - Köln city directory (1891)
 - Ludendorff: Kriegserinnerungen (1921)
 - Menzel: Der praktische Maurer  (1847)
-- Kreis-Kalender für den Kreis Plön (1909)
+- Kreis-Kalender für den Kreis Plön (1909) urn:nbn:de:gbv:8:2-2533517
 - Preuschen: Yoshiwara (1920)
 - Schiller und Oberösterreich (1905) urn:nbn:at:AT-OOeLB-1099695
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
