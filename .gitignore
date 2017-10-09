@@ -10,3 +10,4 @@ fraktur-[0-9]*.clstm
 *.bin.txt
 *.prob
 *.llocs
+*.alocs
