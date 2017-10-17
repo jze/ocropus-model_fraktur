@@ -11,19 +11,21 @@ In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also tr
 
 The ground truth images for this model were selected from these historic books:
 
-- Das astronomische Weltbild im Wandel der Zeit (1912) urn:nbn:at:AT-OOeLB-4113427
 - Topographische Chronik von Breslau  (1805)
-- Egger: Die christliche Mutter (1914)
-- Frapan: Bittersüß (1891)
-- Gartenlaube Heft 1, S. 8 (1897)
+- Menzel: Der praktische Maurer  (1847) urn:nbn:de:kobv:b4-25126-9
 - Kiel city directory (1888)
-- Was sollen wir kochen? (1915)  urn:nbn:at:AT-OOeLB-1184253
 - Köln city directory (1891)
-- Ludendorff: Kriegserinnerungen (1921)
-- Menzel: Der praktische Maurer  (1847)
-- Kreis-Kalender für den Kreis Plön (1909) urn:nbn:de:gbv:8:2-2533517
-- Preuschen: Yoshiwara (1920)
+- Gartenlaube Heft 1, S. 8 (1897)
+- Munzinger: Die Japaner (1898) urn:nbn:de:kobv:b4-200905194219
+- Frapan: Bittersüß (1891) urn:nbn:de:kobv:b4-200905191440
 - Schiller und Oberösterreich (1905) urn:nbn:at:AT-OOeLB-1099695
+- Kreis-Kalender für den Kreis Plön (1909) urn:nbn:de:gbv:8:2-2533517
+- Das astronomische Weltbild im Wandel der Zeit (1912) urn:nbn:at:AT-OOeLB-4113427
+- Egger: Die christliche Mutter (1914) urn:nbn:de:kobv:b4-30011-9
+- Was sollen wir kochen? (1915)  urn:nbn:at:AT-OOeLB-1184253
+- Der Große Krieg in Einzeldarstellungen - Die Winterschlacht in Masuren  (1918) urn:nbn:at:AT-OOeLB-1691328 
+- Preuschen: Yoshiwara (1920) urn:nbn:de:kobv:b4-30090-0
+- Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
@@ -50,7 +52,7 @@ Using a language model you can easily replace the wrong characters. In German an
 
 ### s, tz, ch, ck and others
 
-Fraktur has a few special characters that usually do not occur in 'normal' text, such as the long-S or the tz ligature. This model (and the ground truth) translates them into 'normal' characters. Therefore a long-S will be interpreted as s and the ligatures will be interpreted as two characters.
+Fraktur has a few special characters that usually do not occur in 'normal' text, such as the long-S or the tz ligature. This model (and the ground truth) recognizsed the correct Unicode character LATIN SMALL LETTER LONG S. The tz-ligature is interpredted as two characters. 
 
 ![Wasser](images/long-s.png)
 
@@ -76,3 +78,9 @@ To train the model from scratch you can use this command:
 (Make sure that the OCRopus directory is included in PATH.) If you want to improve the existing model you can start with it:
 
 	ocropus-rtrain -c codec.txt -F 2000 --load fraktur.pyrnn.gz -o fraktur "training/*.bin.png"
+
+You can see the training progress in this image:
+
+![diagram showing the training progress](images/accuracy.png)
+
+If you are interested in the amount of ground-truth data  and the character accuracy for each book used for the model traning, take a look at the `overview-*` diagrams in the `images` folder.

@@ -9,5 +9,5 @@ set xrange [0:]
 set yrange [0.95:1]
 
 plot 'errors.csv' u 1:(1-$2) with lines title 'testing',\
-'' u 1:(1-$3) title 'training',\
-'' u 1:(1-$3) title 'exclusive testing'
+'' u 1:(1-$3) with lines title 'training',\
+'' u 1:(1-$4) with lines title 'exclusive testing'
