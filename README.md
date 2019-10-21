@@ -1,10 +1,10 @@
 # Fraktur model for OCRopus
 
-This is a character model for recognizing Fraktur font with [OCRopus](https://github.com/tmbdev/ocropy). 
+This is a character model for recognizing Fraktur font with [OCRopus](https://github.com/tmbdev/ocropy).
 
 With test data that has not been used in the training process it yields an excellent error rate of 1.089%. The 'standard' Fraktur model shows an error rate of 3.14% for the same test data.
 
-In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also trained a character model for [CLSTM](https://github.com/tmbdev/clstm). 
+In addition to the pyrnn.gz model to be used with `ocropus-rpred` I have also trained a character model for [CLSTM](https://github.com/tmbdev/clstm).
 
 
 ## Sources
@@ -23,7 +23,7 @@ The ground truth images for this model were selected from these historic books:
 - Das astronomische Weltbild im Wandel der Zeit (1912) urn:nbn:at:AT-OOeLB-4113427
 - Egger: Die christliche Mutter (1914) urn:nbn:de:kobv:b4-30011-9
 - Was sollen wir kochen? (1915)  urn:nbn:at:AT-OOeLB-1184253
-- Der Große Krieg in Einzeldarstellungen - Die Winterschlacht in Masuren  (1918) urn:nbn:at:AT-OOeLB-1691328 
+- Der Große Krieg in Einzeldarstellungen - Die Winterschlacht in Masuren  (1918) urn:nbn:at:AT-OOeLB-1691328
 - Preuschen: Yoshiwara (1920) urn:nbn:de:kobv:b4-30090-0
 - Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
@@ -32,7 +32,7 @@ For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic t
 
 In addition, samples from these documents are included for testing the robustness of the model:
 
-- Peters: Wisch und Umgegend (1898) 
+- Peters: Wisch und Umgegend (1898)
 - Internationaler Funkentelegraphenvertrag (1906)
 - Das Inselschiff, eine Zeitschrift für Freunde der Literatur und des schönen Buches, page 23 (1914)
 
@@ -46,23 +46,23 @@ A problem with Fraktur are the upper-case letters I and J. For many Fraktur font
 
 ![Jäger](images/J.png)
 
-However, for a neuronal network two indistinguishable but different characters are a big problem. Therefore, it might be better to decide on one letter to avoid the ambiguity. I suggest the uppercase I. As a consequence every J will be recognized as I. The result will be some strange words such as "Iuly". 
+However, for a neuronal network two indistinguishable but different characters are a big problem. Therefore, it might be better to decide on one letter to avoid the ambiguity. I suggest the uppercase I. As a consequence every J will be recognized as I. The result will be some strange words such as "Iuly".
 
-Using a language model you can easily replace the wrong characters. In German an uppercase J is usually followed by a lowercase vowel. 
+Using a language model you can easily replace the wrong characters. In German an uppercase J is usually followed by a lowercase vowel.
 
 ### s, tz, ch, ck and others
 
-Fraktur has a few special characters that usually do not occur in 'normal' text, such as the long-S or the tz ligature. This model (and the ground truth) recognizsed the correct Unicode character LATIN SMALL LETTER LONG S. The tz-ligature is interpredted as two characters. 
+Fraktur has a few special characters that usually do not occur in 'normal' text, such as the long-S or the tz ligature. This model (and the ground truth) recognizes the correct Unicode character LATIN SMALL LETTER LONG S. The tz ligature is interpreted as two characters.
 
 ![Wasser](images/long-s.png)
 
 ### Quotation mark
 
-Often you will find two different kind of quotation marks. The opening lower quotation marks the closing upper quotation marks.
+Often you will find two different kinds of quotation marks, the opening lower quotation mark and the closing upper quotation mark.
 
 ![„Bildhauer“](images/quot.png)
 
-I decided to distinguish between the two kind of quotation marks. 
+I decided to distinguish between the two kinds of quotation marks.
 
 - opening: „
 - closing: “
