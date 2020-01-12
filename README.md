@@ -27,6 +27,7 @@ The ground truth images for this model were selected from these historic books:
 - Preuschen: Yoshiwara (1920) urn:nbn:de:kobv:b4-30090-0
 - Ludendorff: Kriegserinnerungen (1921)
 - Ehrenbuch der Gefallenen Stuttgarts (1925)
+- Zedlitz: Die Zedlitze und ihre Heimat (1925)
 
 For some rare characters (Q, Y, Ä, Ö and Ü) I have generated some synthetic training data with OCRopus-linegen using the Walbaum Fraktur font and words from a German dictionary.
 
